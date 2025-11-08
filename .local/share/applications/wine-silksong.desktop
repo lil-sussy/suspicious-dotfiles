@@ -1,0 +1,32 @@
+[Desktop Entry]
+# The type as listed above
+Type=Application
+MimeType=application/x-hollowknight-save;application/x-hollowknight-mod;
+
+
+# The version of the desktop entry specification to which this file complies
+Version=1.0
+
+# The name of the application
+Name=Hollow Knight Silksong
+
+# A comment which can/will be used as a tooltip
+Comment=Play Hollow Knight Silksong via Wine
+
+# The path to the folder in which the executable is run
+Path=/home/Jettsy/Desktop
+
+# The executable of the application, possibly with arguments.
+# Exec=sh -c 'export DISPLAY=:0; wine /mnt/games_hdd/Games/Hollow-Knight-Silksong-AnkerGames/Hollow\ Knight\ Silksong/Hollow\ Knight\ Silksong/Hollow\ Knight\ Silksong.exe > ~/.cache/wine/silksong-wine.log 2>&1'
+
+Exec=sh -c "export DISPLAY=:0; wine /mnt/games_hdd/Games/Hollow-Knight-Silksong-AnkerGames/Hollow\\ Knight\\ Silksong/Hollow\\ Knight\\ Silksong/Hollow\\ Knight\\ Silksong.exe > ~/.cache/wine/silksong-wine.log 2>&1"
+
+
+# The name of the icon that will be used to display this entry
+Icon=/home/Jettsy/.local/share/applications/silksong.png
+
+# Describes whether this application needs to be run in a terminal or not
+Terminal=false
+
+# Describes the categories in which this entry should be shown
+Categories=Game;
