@@ -1,0 +1,28 @@
+
+body {
+  --background-primary: rgba(0, 0, 0, 0) !important;
+  --titlebar-background: rgba(0, 0, 0, 0) !important;
+  --workspace-background-translucent: rgba(0, 0, 0, 0.3);
+}
+.workspace-leaf,
+.workspace-tab-header-container,
+.workspace-split.mod-root,
+.workspace-split.mod-root .view-content,
+.workspace-split.mod-root .view-header,
+.custom-frames-frame,
+.view-header-title-container:not(.mod-at-end):after {
+  background: rgba(0, 0, 0, 0) !important;
+}
+
+.workspace-ribbon,
+.side-dock,
+.workspace-tabs,
+.nav-side-bar,
+.side-dock.mod-left,
+.side-dock.mod-right {
+  background: rgba(0, 0, 0, 0) !important;
+}
+
+.workspace-split {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
