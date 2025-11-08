@@ -1,0 +1,74 @@
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+#menuentry "Windy cringy" {
+#	insmod part_gpt
+#	insmod fat
+#	set root="hd4,gpt1"
+#	chainloader /EFI/Microsoft/Boot/bootmgfw.efi
+#}
+#
+menuentry "Briar Ass Sweat (on : /dev/sda3)" {
+	insmod part_gpt
+	insmod ext2
+	search --no-floppy --fs-uuid --set=root 57f85a98-25b4-4a91-a0d3-254802090b27
+	linux /boot/vmlinuz-linux root=/dev/sda3 rw loglevel=5 quiet
+#	initrd /boot/intel-ucode.img /boot/initramfs-linux.img
+	initrd /boot/initramfs-linux.img
+}
+
+menuentry "Briar Ass Sweat (on : /dev/sdd5)" {
+	insmod part_gpt
+	insmod ext2
+	search --no-floppy --fs-uuid --set=root 01afc67c-bf92-49d2-8eb5-6f6917c653e4
+	linux /boot/vmlinuz-linux root=/dev/sdd5 rw loglevel=5 quiet
+#	initrd /boot/intel-ucode.img /boot/initramfs-linux.img
+	initrd /boot/initramfs-linux.img
+}
+
+
+menuentry 'Briar Ass Sweat (on : /dev/sda3) [BUILDING_ACCES]' --class arch --class gnu-linux --class gnu --class os $menuentry_id_option 'osprober-gnulinux-simple-00c775aa-4535-4bcc-a73c-4a7c3f5528a8' {
+	insmod part_gpt
+	insmod ext2
+	set root='hd0,gpt3'
+	if [ x$feature_platform_search_hint = xy ]; then
+	  search --no-floppy --fs-uuid --set=root --hint-bios=hd0,gpt3 --hint-efi=hd0,gpt3 --hint-baremetal=ahci0,gpt3  57f85a98-25b4-4a91-a0d3-254802090b27
+	else
+	  search --no-floppy --fs-uuid --set=root 57f85a98-25b4-4a91-a0d3-254802090b27
+	fi
+	linux /boot/vmlinuz-linux root=/dev/sda3
+	initrd /boot/initramfs-linux.img
+}
+submenu 'Advanced options for Arch Linux (on /dev/sda3)' $menuentry_id_option 'osprober-gnulinux-advanced-57f85a98-25b4-4a91-a0d3-254802090b27' {
+	menuentry 'Briar Ass Sweat [BUILDING_ACCES]' --class gnu-linux --class gnu --class os $menuentry_id_option 'osprober-gnulinux-/boot/vmlinuz-linux--57f85a98-25b4-4a91-a0d3-254802090b27' {
+		insmod part_gpt
+		insmod ext2
+		set root='hd0,gpt3'
+		if [ x$feature_platform_search_hint = xy ]; then
+		  search --no-floppy --fs-uuid --set=root --hint-bios=hd0,gpt3 --hint-efi=hd0,gpt3 --hint-baremetal=ahci0,gpt3 57f85a98-25b4-4a91-a0d3-254802090b27
+		else
+		  search --no-floppy --fs-uuid --set=root 57f85a98-25b4-4a91-a0d3-254802090b27
+		fi
+		linux /boot/vmlinuz-linux root=/dev/sda3
+		initrd /boot/initramfs-linux.img
+	}
+}
+
+
+
+
+if [ "$grub_platform" = "efi" ]; then
+menuentry 'Windy Cringy (on /dev/sdd1)' --class windows --class os $menuentry_id_option 'osprober-efi-5432-A60C' {
+	insmod part_gpt
+	insmod fat
+	set root='hd3,gpt1'
+	if [ x$feature_platform_search_hint = xy ]; then
+	  search --no-floppy --fs-uuid --set=root --hint-bios=hd3,gpt1 --hint-efi=hd3,gpt1 --hint-baremetal=ahci3,gpt1  5432-A60C
+	else
+	  search --no-floppy --fs-uuid --set=root 5432-A60C
+	fi
+	chainloader /efi/Microsoft/Boot/bootmgfw.efi
+}
+fi
