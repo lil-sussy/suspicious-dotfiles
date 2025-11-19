@@ -1,0 +1,30 @@
+[Desktop Entry]
+# The type as listed above
+Type=Application
+# MimeType=application/x-hollowknight-save;application/x-hollowknight-mod;
+
+
+# The version of the desktop entry specification to which this file complies
+Version=1.0
+
+# The name of the application
+Name=Livebox Monitor
+
+# A comment which can/will be used as a tooltip
+Comment=Monitor your Livebox
+
+# The path to the folder in which the executable is run
+Path=/home/Jettsy/.local/bin
+
+
+Exec=/home/Jettsy/.local/bin/LiveboxMonitor
+
+
+# The name of the icon that will be used to display this entry
+# Icon=/home/Jettsy/.local/share/applications/silksong.png
+
+# Describes whether this application needs to be run in a terminal or not
+Terminal=false
+
+# Describes the categories in which this entry should be shown
+Categories=Network;

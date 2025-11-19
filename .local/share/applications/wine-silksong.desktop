@@ -19,7 +19,10 @@ Path=/home/Jettsy/Desktop
 # The executable of the application, possibly with arguments.
 # Exec=sh -c 'export DISPLAY=:0; wine /mnt/games_hdd/Games/Hollow-Knight-Silksong-AnkerGames/Hollow\ Knight\ Silksong/Hollow\ Knight\ Silksong/Hollow\ Knight\ Silksong.exe > ~/.cache/wine/silksong-wine.log 2>&1'
 
-Exec=sh -c "export DISPLAY=:0; wine /mnt/games_hdd/Games/Hollow-Knight-Silksong-AnkerGames/Hollow\\ Knight\\ Silksong/Hollow\\ Knight\\ Silksong/Hollow\\ Knight\\ Silksong.exe > ~/.cache/wine/silksong-wine.log 2>&1"
+#Exec=sh -c "export DISPLAY=:0; wine /mnt/games_hdd/Games/Hollow-Knight-Silksong-AnkerGames/Hollow\\ Knight\\ Silksong/Hollow\\ Knight\\ Silksong/Hollow\\ Knight\\ Silksong.exe > ~/.cache/wine/silksong-wine.log 2>&1"
+
+#Exec=sh -c 'PROTON_NO_ESYNC=1 PROTON_NO_FSYNC=1 WINEESYNC=0 WINEFSYNC=0 proton-ge run "/mnt/games_hdd/Games/Hollow-Knight-Silksong-AnkerGames/Hollow Knight Silksong/Hollow Knight Silksong/Hollow Knight Silksong.exe" > ~/.cache/wine/silksong-proton.log 2>&1'
+Exec=sh -c 'proton-ge run "/mnt/games_hdd/Games/Hollow-Knight-Silksong-AnkerGames/Hollow Knight Silksong/Hollow Knight Silksong/Hollow Knight Silksong.exe" > ~/.cache/wine/silksong-proton.log 2>&1'
 
 
 # The name of the icon that will be used to display this entry
